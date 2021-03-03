@@ -1,0 +1,117 @@
+.page-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+.page-footer__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 0;
+}
+
+.page-footer__socials {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.page-footer__item {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  margin-right: 7px;
+
+  background-image: url("../img/instagram.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  transition: all 0.2s ease-out;
+  cursor: pointer;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &:hover,
+  &:focus {
+    background-image: url("../img/instagram-hover.png");
+  }
+}
+
+.page-footer__item--vk {
+  background-image: url("../img/vk.svg");
+
+  &:hover,
+  &:focus {
+    background-image: url("../img/vk-hover.png");
+  }
+}
+
+.page-footer__question {
+  position: relative;
+  top: 3px;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 144%;
+  font-feature-settings: 'pnum'on, 'lnum'on;
+  color: $light-grey-text;
+  text-decoration: none;
+  padding-bottom: 2px;
+  transition: all 0.2s ease-out;
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' stroke='white' stroke-width='5' stroke-dasharray='1%2c 12' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");
+  }
+
+  &:hover,
+  &:focus {
+    color: $accent-text;
+
+    &::before {
+      background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' stroke='orange' stroke-width='5' stroke-dasharray='1%2c 12' stroke-dashoffset='0' stroke-linecap='round'/%3e%3c/svg%3e");
+    }
+  }
+
+  &:active {
+    opacity: 0.7;
+  }
+}
+
+@media (max-width: $tablet) {
+  .page-footer__content {
+    padding: 35px 36px;
+  }
+
+  .page-footer__item {
+    width: 36px;
+    height: 36px;
+    margin-right: 16px;
+  }
+
+  .page-footer__question {
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 0.03em;
+    top: 0;
+  }
+}
+
+@media (max-width: $mobile) {
+  .page-footer {
+    display: none;
+  }
+
+  .page-footer__content {
+    padding: 35px 16px;
+  }
+}
