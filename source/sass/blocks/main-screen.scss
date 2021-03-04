@@ -33,7 +33,7 @@
     background-image: url("../img/main_bg_mobile.jpg");
 
     @supports(background-image: url("../img/main_bg_mobile.webp")) {
-      background-image: url("../img/main_bg._mobilewebp");
+      background-image: url("../img/main_bg_mobile.webp");
     }
 
     @media (min-resolution: 2dppx) {

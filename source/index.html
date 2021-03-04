@@ -12,6 +12,102 @@
   <link rel="preload" href="./fonts/Raleway-Regular.woff2" as="font">
   <link rel="stylesheet" href="css/style.min.css">
 </head>
+
+<section class="modal">
+  <h2 class="visually-hidden">Выбор города</h2>
+  <div class="modal__overlay">
+    <article class="modal__popup">
+      <div class="modal__city city-choice">
+        <h2>Ваш город:</h2>
+        <button class="city-choice__coordinates">
+          <svg width="20" height="20">
+            <use xlink:href="./img/sprite.svg#target"></use>
+          </svg>
+          <span>Определить местоположение</span>
+        </button>
+        <p>... или выберите вручную</p>
+        <ul class="city-choice__list">
+          <li class="city-choice__item city-choice__item--active">
+            <a href="#" class="city-choice__link">Новосибирск</a>
+          </li>
+          <li class="city-choice__item">
+            <a href="#" class="city-choice__link">Иркутск</a>
+          </li>
+          <li class="city-choice__item">
+            <a href="#" class="city-choice__link">Смоленск</a>
+          </li>
+          <li class="city-choice__item">
+            <a href="#" class="city-choice__link">Волгоград</a>
+          </li>
+          <li class="city-choice__item">
+            <a href="#" class="city-choice__link">Комсомольск-на-Амуре</a>
+          </li>
+        </ul>
+      </div>
+      <button type="button" class="modal__close">
+        <span class="visually-hidden">Закрыть</span>
+        <svg width="17" height="17">
+          <use xlink:href="./img/sprite.svg#burger-close"></use>
+        </svg>
+      </button>
+    </article>
+  </div>
+</section>
+
+<section class="modal ">
+  <h2 class="visually-hidden">Выбор города</h2>
+  <div class="modal__overlay">
+    <article class="modal__popup">
+      <form class="modal__question question">
+        <h2>Задайте вопрос</h2>
+        <div class="question__item">
+          <p>Чтобы мы смогли обращаться к вам, оставьте ваше имя</p>
+          <div class="question__wrapper">
+            <label for="name">Имя</label>
+            <input id="name" type="text" placeholder="Имя" required>
+          </div>
+        </div>
+        <div class="question__item">
+          <p>Чтобы вы получили ответ, оставьте ваш e-mail </p>
+          <div class="question__wrapper">
+            <label for="email">E-mail</label>
+            <input id="email" type="email" placeholder="E-mail" required>
+          </div>
+        </div>
+        <div class="question__item question__item--text">
+          <p>Ваш вопрос:</p>
+          <div class="question__wrapper">
+            <label for="text">Начните вводить ...</label>
+            <textarea id="text" placeholder="Начните вводить ..." required></textarea>
+          </div>
+        </div>
+        <div class="question__agree">
+          <input id="agree" type="checkbox" required>
+          <label for="agree">
+            <span>
+              Я согласен с
+            </span>
+            <span>
+              <a href="#">
+                правилами обработки персональных данных
+              </a>
+            </span>
+            <span>
+              и пользовательским соглашением
+            </span>
+          </label>
+        </div>
+        <button type="submit" class="button question__submit question__submit--inactive">Отправить вопрос</button>
+      </form>
+      <button type="button" class="modal__close">
+        <span class="visually-hidden">Закрыть</span>
+        <svg width="17" height="17">
+          <use xlink:href="./img/sprite.svg#burger-close"></use>
+        </svg>
+      </button>
+    </article>
+  </div>
+</section>
 <!--
 <body class="main-screen main-screen--menu-opened">
   <header class="page-header page-header--menu-opened"> -->
@@ -66,23 +162,24 @@
     </div>
   </header>
 
-    <section class="intro">
-      <div class="container">
-        <div class="intro__content">
-          <h1>
-            Лучшие квесты
-            <br>
-            в Новосибирске
-          </h1>
-          <p>
-            Надоело проводить свободное время лёжа на диване?  Игровые площадки questroom на целый час погружают вас  в мир незабываемых авантюр. Ищите подсказки, решайте головоломки и находите выход из комнаты!
-          </p>
-          <a href="#" class="button intro__choice">
-            Выбрать квест
-          </a>
-        </div>
+  <section class="intro">
+    <div class="container">
+      <div class="intro__content">
+        <h1>
+          Лучшие квесты
+          <br>
+          в Новосибирске
+        </h1>
+        <p>
+          Надоело проводить свободное время лёжа на диване? Игровые площадки questroom на целый час погружают вас в мир
+          незабываемых авантюр. Ищите подсказки, решайте головоломки и находите выход из комнаты!
+        </p>
+        <a href="./catalog.html" class="button intro__choice">
+          Выбрать квест
+        </a>
       </div>
-    </section>
+    </div>
+  </section>
 
   <footer class="main-screen__footer page-footer">
     <div class="container">

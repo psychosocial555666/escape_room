@@ -1,0 +1,43 @@
+.quest-choice__content {
+  padding-top: 122px;
+
+  h1 {
+    padding: 0;
+    margin: 0;
+    font-weight: 800;
+    font-size: 64px;
+    line-height: 110%;
+    margin-bottom: 48px;
+  }
+}
+
+.quest-choice__label {
+  display: block;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 144%;
+  color: $accent-text;
+  margin-bottom: 7px;
+}
+
+@media (max-width: $tablet) {
+  .quest-choice__content {
+    padding: 120px 36px 0;
+
+    h1 {
+      font-size: 36px;
+      line-height: 110%;
+      margin-bottom: 40px;
+    }
+  }
+
+  .quest-choice__label {
+    margin-bottom: 12px;
+  }
+}
+
+@media (max-width: $mobile) {
+  .quest-choice__content {
+    padding: 86px 16px 0;
+  }
+}
