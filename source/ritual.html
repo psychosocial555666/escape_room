@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="Учебный проект HTML Academy Escape Room">
+  <meta name="robots" content="nofollow">
+  <meta name="googlebot" content="noindex">
+  <title>Escape Room</title>
+  <link rel="preload" href="./fonts/Raleway-Regular.woff2" as="font">
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<section class="modal">
+  <h2 class="visually-hidden">Выбор города</h2>
+  <div class="modal__overlay">
+    <article class="modal__popup">
+      <div class="modal__city city-choice">
+        <h2>Ваш город:</h2>
+        <button class="city-choice__coordinates">
+          <svg width="20" height="20">
+            <use xlink:href="./img/sprite.svg#target"></use>
+          </svg>
+          <span>Определить местоположение</span>
+        </button>
+        <p>... или выберите вручную</p>
+        <ul class="city-choice__list">
+          <li class="city-choice__item city-choice__item--active">
+            <a href="#" class="city-choice__link">Новосибирск</a>
+          </li>
+          <li class="city-choice__item">
+            <a href="#" class="city-choice__link">Иркутск</a>
+          </li>
+          <li class="city-choice__item">
+            <a href="#" class="city-choice__link">Смоленск</a>
+          </li>
+          <li class="city-choice__item">
+            <a href="#" class="city-choice__link">Волгоград</a>
+          </li>
+          <li class="city-choice__item">
+            <a href="#" class="city-choice__link">Комсомольск-на-Амуре</a>
+          </li>
+        </ul>
+      </div>
+      <button type="button" class="modal__close">
+        <span class="visually-hidden">Закрыть</span>
+        <svg width="17" height="17">
+          <use xlink:href="./img/sprite.svg#burger-close"></use>
+        </svg>
+      </button>
+    </article>
+  </div>
+</section>
+
+<section class="modal ">
+  <h2 class="visually-hidden">Выбор города</h2>
+  <div class="modal__overlay">
+    <article class="modal__popup">
+      <form class="modal__question question">
+        <h2>Задайте вопрос</h2>
+        <div class="question__item">
+          <p>Чтобы мы смогли обращаться к вам, оставьте ваше имя</p>
+          <div class="question__wrapper">
+            <label for="name">Имя</label>
+            <input id="name" type="text" placeholder="Имя" required>
+          </div>
+        </div>
+        <div class="question__item">
+          <p>Чтобы вы получили ответ, оставьте ваш e-mail </p>
+          <div class="question__wrapper">
+            <label for="email">E-mail</label>
+            <input id="email" type="email" placeholder="E-mail" required>
+          </div>
+        </div>
+        <div class="question__item question__item--text">
+          <p>Ваш вопрос:</p>
+          <div class="question__wrapper">
+            <label for="text">Начните вводить ...</label>
+            <textarea id="text" placeholder="Начните вводить ..." required></textarea>
+          </div>
+        </div>
+        <div class="question__agree">
+          <input id="agree" type="checkbox" required>
+          <label for="agree">
+            <span>
+              Я согласен с
+            </span>
+            <span>
+              <a href="#">
+                правилами обработки персональных данных
+              </a>
+            </span>
+            <span>
+              и пользовательским соглашением
+            </span>
+          </label>
+        </div>
+        <button type="submit" class="button question__submit question__submit--inactive">Отправить вопрос</button>
+      </form>
+      <button type="button" class="modal__close">
+        <span class="visually-hidden">Закрыть</span>
+        <svg width="17" height="17">
+          <use xlink:href="./img/sprite.svg#burger-close"></use>
+        </svg>
+      </button>
+    </article>
+  </div>
+</section>
+
+<body class="current-quest">
+  <header class="current-quest__header page-header">
+    <div class="container">
+      <div class="page-header__content">
+        <a href="./index.html" class="page-header__logo">
+          <svg width="136" height="50">
+            <use xlink:href="./img/sprite.svg#logo"></use>
+          </svg>
+        </a>
+        <nav class="page-header__nav main-nav">
+          <ul class="main-nav__list">
+            <li class="main-nav__item">
+              <a href="./catalog.html" class="main-nav__link">Квесты</a>
+            </li>
+            <li class="main-nav__item">
+              <a href="#" class="main-nav__link">Новичкам</a>
+            </li>
+            <li class="main-nav__item">
+              <a href="#" class="main-nav__link">Отзывы</a>
+            </li>
+            <li class="main-nav__item">
+              <a href="#" class="main-nav__link">Акции</a>
+            </li>
+            <li class="main-nav__item">
+              <a href="#" class="main-nav__link">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="page-header__contacts">
+          <a href="#" class="page-header__link page-header__city">
+            <svg width="16" height="21">
+              <use xlink:href="./img/sprite.svg#pin"></use>
+            </svg>
+            <span>
+              НОВОСИБИРСК
+            </span>
+          </a>
+          <a href="tel:+73832840160" class="page-header__link page-header__tel">
+            <span>
+              8 (383) 284 01 60
+            </span>
+          </a>
+        </div>
+        <button class="page-header__toggle">
+          Меню
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <section class="quest-info">
+    <div class="quest-info__image">
+      <picture>
+        <!-- 1x: 360px; 2x: 720px -->
+        <source media="(max-width: 767px)" srcset="./img/ritual-bg-mobile.webp 1x, ./img/ritual-bg-mobile@2x.webp 2x"
+          type="image/webp">
+        <!-- 1x: 1366px; 2x: 2732px -->
+        <source media="(min-width: 768px)" srcset="./img/ritual-bg.webp 1x, ./img/ritual-bg@2x.webp 2x"
+          type="image/webp">
+        <!-- 1x: 1366px; 2x: 2732px -->
+        <img src="./img/ritual-bg.jpg" width="1366" height="768" alt="Маньяк">
+      </picture>
+    </div>
+    <div class="container-inner">
+      <div class="quest-info__content">
+        <a href="./catalog.html" class="quest-info__back">
+          <svg width="8" height="12">
+            <use xlink:href="./img/sprite.svg#back"></use>
+          </svg>
+          ВСЕ КВЕСТЫ</span>
+        </a>
+        <span class="quest-info__label">
+          хоррор, мистика
+        </span>
+        <h1>
+          РИТУАЛ
+        </h1>
+        <div class="quest-info__parametres">
+          <span class="quest-info__parametr quest-info__time">
+            <svg width="20" height="20">
+              <use xlink:href="./img/sprite.svg#clock"></use>
+            </svg>
+            60 мин</span>
+          <span class="quest-info__parametr quest-info__members">
+            <svg width="17" height="20">
+              <use xlink:href="./img/sprite.svg#person"></use>
+            </svg>
+            3–5 чел</span>
+          <span class="quest-info__parametr quest-info__difficulty">
+            <svg width="21" height="21">
+              <use xlink:href="./img/sprite.svg#puzzle"></use>
+            </svg>
+            высокая сложность</span>
+        </div>
+        <p>
+          Тяжелый воздух угнетает, в ночи вы оказыватесь запертыми в сыром помещении вместе с другими ничего не понимающими жертвами. Сквозь щель в двери вы видите, как некто в капюшоне готовит площадку как будто для проведения мистического обряда. Удастсяли вам выбраться, пока вы не станете жертвой ритуала?        </p>
+        <button type="button" class="quest-info__button button">ЗАБРОНИРОВАТЬ</button>
+      </div>
+    </div>
+  </section>
+
+  <footer class="current-quest__footer page-footer">
+    <div class="container">
+      <div class="page-footer__content">
+        <ul class="page-footer__socials">
+          <li class="page-footer__item page-footer__item--instagram">
+            <a href="#" class="page-footer__link">
+              <span class="visually-hidden">Инстаграм</span>
+            </a>
+          </li>
+          <li class="page-footer__item page-footer__item--vk">
+            <a href="#" class="page-footer__link">
+              <span class="visually-hidden">Вконтакте</span>
+            </a>
+          </li>
+        </ul>
+        <a href="#" class="page-footer__question">
+          Задать вопрос
+        </a>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>

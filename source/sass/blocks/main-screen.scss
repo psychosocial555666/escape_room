@@ -22,12 +22,6 @@
   }
 }
 
-.main-screen--menu-opened {
-  .main-screen__footer {
-    display: block;
-  }
-}
-
 @media (max-width: $mobile) {
   .main-screen {
     background-image: url("../img/main_bg_mobile.jpg");

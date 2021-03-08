@@ -13,6 +13,7 @@
   transition: all 0.2s ease-out;
   background-color: $accent;
   border: none;
+  cursor: pointer;
 
   &:hover,
   &:focus {

@@ -45,6 +45,12 @@ body {
   display: block;
 }
 
+.menu-opened {
+  .page-footer {
+    display: block;
+  }
+}
+
 @media (max-width: $tablet) {
   .mobile-only {
     display: none;
