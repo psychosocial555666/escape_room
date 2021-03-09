@@ -64,25 +64,25 @@
           <p>Чтобы мы смогли обращаться к вам, оставьте ваше имя</p>
           <div class="question__wrapper">
             <label for="name">Имя</label>
-            <input id="name" type="text" placeholder="Имя" required>
+            <input id="name" type="text" placeholder="Имя" required="">
           </div>
         </div>
         <div class="question__item">
           <p>Чтобы вы получили ответ, оставьте ваш e-mail </p>
           <div class="question__wrapper">
             <label for="email">E-mail</label>
-            <input id="email" type="email" placeholder="E-mail" required>
+            <input id="email" type="email" placeholder="E-mail" required="">
           </div>
         </div>
         <div class="question__item question__item--text">
           <p>Ваш вопрос:</p>
           <div class="question__wrapper">
             <label for="text">Начните вводить ...</label>
-            <textarea id="text" placeholder="Начните вводить ..." required></textarea>
+            <textarea id="text" placeholder="Начните вводить ..." required=""></textarea>
           </div>
         </div>
         <div class="question__agree">
-          <input id="agree" type="checkbox" required>
+          <input id="agree" type="checkbox" required="">
           <label for="agree">
             <span>
               Я согласен с
@@ -109,8 +109,8 @@
   </div>
 </section>
 
-<body class="current-quest">
-  <header class="current-quest__header page-header">
+<body class="booking-screen">
+  <header class="booking-screen__header page-header">
     <div class="container">
       <div class="page-header__content">
         <a href="./index.html" class="page-header__logo">
@@ -159,60 +159,131 @@
     </div>
   </header>
 
-  <section class="quest-info">
-    <div class="quest-info__image">
+  <section class="booking">
+    <div class="booking__image">
       <picture>
         <!-- 1x: 360px; 2x: 720px -->
-        <source media="(max-width: 767px)" srcset="./img/house-bg-mobile.webp 1x, ./img/house-bg-mobile@2x.webp 2x"
-          type="image/webp">
+        <source media="(max-width: 767px)" srcset="./img/maniac-bg-mobile.webp 1x, ./img/maniac-bg-mobile@2x.webp 2x" type="image/webp">
         <!-- 1x: 1366px; 2x: 2732px -->
-        <source media="(min-width: 768px)" srcset="./img/house-bg.webp 1x, ./img/house-bg@2x.webp 2x"
-          type="image/webp">
+        <source media="(min-width: 768px)" srcset="./img/maniac-bg.webp 1x, ./img/maniac-bg@2x.webp 2x" type="image/webp">
         <!-- 1x: 1366px; 2x: 2732px -->
-        <img src="./img/house-bg.jpg" width="1366" height="768" alt="Маньяк">
+        <img src="./img/maniac-bg.jpg" width="1366" height="768" alt="Маньяк">
       </picture>
-
     </div>
     <div class="container-inner">
-      <div class="quest-info__content">
-        <a href="./catalog.html" class="quest-info__back">
+      <div class="booking__content">
+        <a href="./catalog.html" class="booking__back">
           <svg width="8" height="12">
             <use xlink:href="./img/sprite.svg#back"></use>
           </svg>
-          ВСЕ КВЕСТЫ</span>
+          ОПИСАНИЕ
         </a>
-        <span class="quest-info__label">
-          приключение, детектив
+        <span class="booking__label">
+          выбранный квест
         </span>
         <h1>
-          ТАЙНЫ СТАРОГО ОСОБНЯКА
+          МАНЬЯК
         </h1>
-        <div class="quest-info__parametres">
-          <span class="quest-info__parametr quest-info__time">
-            <svg width="20" height="20">
-              <use xlink:href="./img/sprite.svg#clock"></use>
-            </svg>
-            60 мин</span>
-          <span class="quest-info__parametr quest-info__members">
-            <svg width="17" height="20">
-              <use xlink:href="./img/sprite.svg#person"></use>
-            </svg>
-            2–5 чел</span>
-          <span class="quest-info__parametr quest-info__difficulty">
-            <svg width="21" height="21">
-              <use xlink:href="./img/sprite.svg#puzzle"></use>
-            </svg>
-            легкий квест</span>
+
+        <div class="booking__date date">
+          <div class="date__wrapper">
+            <button type="button" class="date__choice date__button">
+              Выберите дату
+              <svg width="5" height="7">
+                <use xlink:href="./img/sprite.svg#arrow"></use>
+              </svg>
+            </button>
+            <p class="date__current-date">
+              22 марта
+            </p>
+          </div>
+
+          <div class="date__explanation">
+            <span class="date__legend date__legend--disabled">— сводобно</span>
+            <span class="date__legend date__legend--busy">— занято</span>
+            <span class="date__legend date__legend--selected">— выбрано вами</span>
+          </div>
+          <form action="#" class="date__form">
+            <ul class="date__list">
+              <li class="date__item">
+                <input type="radio" name="time" id="9:45" value="9:45">
+                <label for="9:45">9:45</label>
+                <span>1400 ₽</span>
+              </li>
+              <li class="date__item">
+                <input type="radio" name="time" id="11:00" value="11:00">
+                <label for="11:00">11:00</label>
+                <span>1400 ₽</span>
+              </li>
+              <li class="date__item">
+                <input type="radio" name="time" id="12:15" value="12:15" disabled="">
+                <label for="12:15">12:15</label>
+                <span>1400 ₽</span>
+              </li>
+              <li class="date__item">
+                <input type="radio" name="time" id="13:30" value="13:30" disabled="">
+                <label for="13:30">13:30</label>
+                <span>1400 ₽</span>
+              </li>
+              <li class="date__item">
+                <input type="radio" name="time" id="14:45" value="14:45">
+                <label for="14:45">14:45</label>
+                <span>1400 ₽</span>
+              </li>
+              <li class="date__item">
+                <input type="radio" name="time" id="16:00" value="16:00">
+                <label for="16:00">16:00</label>
+                <span>1500 ₽</span>
+              </li>
+              <li class="date__item">
+                <input type="radio" name="time" id="17:15" value="17:15" disabled="">
+                <label for="17:15">17:15</label>
+                <span>1500 ₽</span>
+              </li>
+              <li class="date__item">
+                <input type="radio" name="time" id="18:30" value="18:30">
+                <label for="18:30">18:30</label>
+                <span>1500 ₽</span>
+              </li>
+              <li class="date__item">
+                <input type="radio" name="time" id="19:45" value="19:45">
+                <label for="19:45">19:45</label>
+                <span>1500 ₽</span>
+              </li>
+              <li class="date__item">
+                <input type="radio" name="time" id="21:00" value="21:00">
+                <label for="21:00">21:00</label>
+                <span>1800 ₽</span>
+              </li>
+              <li class="date__item">
+                <input type="radio" name="time" id="22:15" value="22:15" disabled="">
+                <label for="22:15">22:15</label>
+                <span>1800 ₽</span>
+              </li>
+              <li class="date__item">
+                <input type="radio" name="time" id="23:30" value="23:30" disabled="">
+                <label for="23:30">23:30</label>
+                <span>2000 ₽</span>
+              </li>
+            </ul>
+            <div class="date__info">
+              <p>
+                Вы выбрали игру <br class="desktop-only"> 22 марта в 16:00. <br> К оплате 1500 рублей.
+              </p>
+              <button type="submit" class="date__pay date__button">
+                Перейти к оплате
+                <svg width="5" height="7">
+                  <use xlink:href="./img/sprite.svg#arrow"></use>
+                </svg>
+              </button>
+            </div>
+          </form>
         </div>
-        <p>
-          Погрузитесь в атмосферу служебных помещений закулисья, которые хранят множество тайн и загадок. Вы окажитесь в старом особнякеи увидите все, что скрывают его запутанные коридоры.
-        </p>
-        <a href="#" class="quest-info__button button">ЗАБРОНИРОВАТЬ</a>
       </div>
     </div>
   </section>
 
-  <footer class="current-quest__footer page-footer">
+  <footer class="booking-screen__footer page-footer">
     <div class="container">
       <div class="page-footer__content">
         <ul class="page-footer__socials">
