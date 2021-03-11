@@ -12,9 +12,8 @@
     top: 0;
     right: -2px;
     z-index: 2;
-    background: linear-gradient(270deg, #1C1B1B 0%, rgba(28, 27, 27, 0) 100%);
+    background: linear-gradient(270deg, #1c1b1b 0%, rgba(28, 27, 27, 0) 100%);
   }
-
 }
 
 .filter__list {
@@ -91,6 +90,7 @@
 @media (max-width: $mobile) {
   .filter__link {
     padding: 5px 12px;
+
     svg {
       height: 24px;
       margin-right: 8px;

@@ -16,6 +16,7 @@
 
 .page-header__logo {
   padding-right: 10.7%;
+  max-width: 136px;
 
   @media (max-width: 1120px) {
     padding-right: 0;
@@ -40,7 +41,7 @@
   display: flex;
   align-items: center;
   letter-spacing: 0.03em;
-  font-feature-settings: 'pnum'on, 'lnum'on;
+  font-feature-settings: "pnum"on, "lnum"on;
   transition: all 0.2s ease-out;
 
   &:hover,
@@ -97,16 +98,20 @@
   font-size: 20px;
   line-height: 16px;
   letter-spacing: 0.03em;
-  font-feature-settings: 'pnum'on, 'lnum'on;
+  font-feature-settings: "pnum"on, "lnum"on;
   padding-right: 28px;
   position: relative;
 
-  background-image: url('../img/burger.svg');
+  background-image: url("../img/burger.svg");
   background-repeat: no-repeat;
   background-position: center right;
 }
 
 @media (max-width: $tablet) {
+  .page-header--onscroll {
+    background: linear-gradient(0deg, transparent 0%, rgba(19, 18, 18, 0.9) 30%);
+  }
+
   .page-header__content {
     padding: 24px 36px;
     flex-direction: column;
@@ -131,14 +136,14 @@
   .page-header--menu-opened {
     width: 100%;
     height: 100%;
-    background: linear-gradient(170.74deg, #633C0F -68.98%, #24150E 75.12%, #1A140D 132.97%);
+    background: linear-gradient(170.74deg, #633c0f -68.98%, #24150e 75.12%, #1a140d 132.97%);
 
     .page-header__nav {
       display: flex;
     }
 
     .page-header__toggle {
-      background-image: url('../img/burger-close.svg');
+      background-image: url("../img/burger-close.svg");
     }
 
     .page-header__contacts {
@@ -167,6 +172,7 @@
 
   .page-header__toggle {
     right: 16px;
+    font-size: 14px;
   }
 
   .page-header__logo {
@@ -174,9 +180,5 @@
       width: 96px;
       height: 36px;
     }
-  }
-
-  .page-header__toggle {
-    font-size: 14px;
   }
 }

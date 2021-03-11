@@ -9,14 +9,14 @@
   background-position: center;
   background-size: cover;
 
-  @supports(background-image: url("../img/main_bg.webp")) {
+  @supports (background-image: url("../img/main_bg.webp")) {
     background-image: url("../img/main_bg.webp");
   }
 
   @media (min-resolution: 2dppx) {
     background-image: url("../img/main_bg@2x.jpg");
 
-    @supports(background-image: url("../img/main_bg@2x.webp")) {
+    @supports (background-image: url("../img/main_bg@2x.webp")) {
       background-image: url("../img/main_bg@2x.webp");
     }
   }
@@ -26,14 +26,14 @@
   .main-screen {
     background-image: url("../img/main_bg_mobile.jpg");
 
-    @supports(background-image: url("../img/main_bg_mobile.webp")) {
+    @supports (background-image: url("../img/main_bg_mobile.webp")) {
       background-image: url("../img/main_bg_mobile.webp");
     }
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/main_bg_mobile@2x.jpg");
 
-      @supports(background-image: url("../img/main_bg_mobile@2x.webp")) {
+      @supports (background-image: url("../img/main_bg_mobile@2x.webp")) {
         background-image: url("../img/main_bg_mobile@2x.webp");
       }
     }

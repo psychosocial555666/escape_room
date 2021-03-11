@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="Учебный проект HTML Academy Escape Room">
+  <meta name="robots" content="nofollow">
+  <meta name="googlebot" content="noindex">
+  <title>Escape Room</title>
+  <link rel="preload" href="./fonts/Raleway-Regular.woff2" as="font">
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+  <div class="main-screen">
+    <section class="modal modal--question modal--show">
+      <h2 class="visually-hidden">Выбор города</h2>
+      <div class="modal__overlay">
+        <article class="modal__popup">
+          <form class="modal__question question">
+            <h2>Задайте вопрос</h2>
+            <div class="question__item question__item--name" title = "Введите имя">
+              <p>Чтобы мы смогли обращаться к вам, оставьте ваше имя</p>
+              <div class="question__wrapper">
+                <label for="name">Имя</label>
+                <input id="name" type="text" placeholder="Имя" required>
+              </div>
+            </div>
+            <div class="question__item question__item--email"  title = "Введён некорректный e-mail, попробуйте заново">
+              <p>Чтобы вы получили ответ, оставьте ваш e-mail </p>
+              <div class="question__wrapper">
+                <label for="email">E-mail</label>
+                <input id="email" type="email" tplaceholder="E-mail" required>
+              </div>
+            </div>
+            <div class="question__item question__item--text"  title = "Введите вопрос">
+              <p>Ваш вопрос:</p>
+              <div class="question__wrapper">
+                <label for="text">Начните вводить ...</label>
+                <textarea id="text" placeholder="Начните вводить ..." required></textarea>
+              </div>
+            </div>
+            <div class="question__agree">
+              <input id="agree" type="checkbox" required>
+              <label for="agree" tabindex="1">
+                <span>
+                  Я согласен с
+                </span>
+                <span>
+                  <a href="#">
+                    правилами обработки персональных данных
+                  </a>
+                </span>
+                <span>
+                  и пользовательским соглашением
+                </span>
+              </label>
+            </div>
+            <button type="submit" class="button question__submit">Отправить вопрос</button>
+          </form>
+        </article>
+      </div>
+    </section>
+</body>
+
+</html>

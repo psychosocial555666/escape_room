@@ -44,10 +44,9 @@
 .quest-info__content {
   position: relative;
   z-index: 1;
-  display: flex;
-  width: 100%;
   height: 100vh;
   box-sizing: border-box;
+  display: flex;
   flex-direction: column;
   justify-content: center;
   margin-left: auto;
@@ -57,7 +56,7 @@
   font-weight: 500;
   font-size: 15px;
   line-height: 150%;
-  font-feature-settings: 'pnum'on, 'lnum'on;
+  font-feature-settings: "pnum"on, "lnum"on;
   color: $light-grey-text;
 
   h1 {
@@ -136,7 +135,7 @@
   text-decoration: none;
   align-items: center;
   letter-spacing: 0.02em;
-  font-feature-settings: 'pnum'on, 'lnum'on;
+  font-feature-settings: "pnum"on, "lnum"on;
 
   svg {
     margin-right: 8px;
@@ -173,7 +172,7 @@
 
     p {
       padding-left: 0;
-      letter-spacing: -0.015em
+      letter-spacing: -0.015em;
     }
   }
 
@@ -190,7 +189,7 @@
     height: 100%;
 
     img {
-      min-width: 360px
+      min-width: 360px;
     }
   }
 
@@ -226,6 +225,7 @@
   .quest-info__members {
     padding-left: 34px;
     padding-right: 34px;
+
     &::before,
     &::after {
       height: 48px;

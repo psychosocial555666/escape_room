@@ -31,18 +31,6 @@
     color: $grey-text;
     letter-spacing: -0.5px;
   }
-}
-
-.question__item--text {
-  margin-bottom: 6px;
-}
-
-.question__wrapper {
-  position: relative;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 144%;
-  color: rgba($light-grey-text, 0.64);
 
   label {
     position: absolute;
@@ -61,8 +49,9 @@
     padding: 17px 24px 18px;
     width: 100%;
     color: rgba($light-grey-text, 0.64);
+
     &:focus {
-      border: 1px solid #13BA19;
+      border: 1px solid #13ba19;
       outline: none;
       color: $grey-text;
     }
@@ -79,7 +68,7 @@
     color: rgba($light-grey-text, 0.64);
 
     &:focus {
-      border: 1px solid #13BA19;
+      border: 1px solid #13ba19;
       outline: none;
       color: $grey-text;
     }
@@ -99,6 +88,39 @@
   }
 }
 
+.question__item--invalid {
+  position: relative;
+
+  input {
+    border-color: #d26f13;
+  }
+
+  &::after {
+    content: attr(title);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    color: #d26f13;
+    opacity: 0.64;
+    padding-left: 24px;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 144%;
+  }
+}
+
+.question__item--text {
+  margin-bottom: 6px;
+}
+
+.question__wrapper {
+  position: relative;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 144%;
+  color: rgba($light-grey-text, 0.64);
+}
+
 .question__submit {
   width: 217px;
   height: 47px;
@@ -110,6 +132,11 @@
 
 .question__submit--inactive {
   background-color: $inactive;
+
+  &:hover,
+  &:focus {
+    background-color: $inactive;
+  }
 }
 
 .question__agree {
@@ -154,8 +181,11 @@
       }
     }
   }
-}
 
-@media (max-width: $mobile) {
-
+  &:hover,
+  &:focus-within {
+    label {
+      color: $accent-text;
+    }
+  }
 }

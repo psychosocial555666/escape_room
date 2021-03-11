@@ -9,199 +9,198 @@
   <meta name="robots" content="nofollow">
   <meta name="googlebot" content="noindex">
   <title>Escape Room</title>
-  <link rel="preload" href="./fonts/Raleway-Regular.woff2" as="font">
+  <link rel="preload" href="./fonts/Raleway-Regular.woff2" as="font" crossorigin="anonymous">
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 
-<section class="modal">
-  <h2 class="visually-hidden">Выбор города</h2>
-  <div class="modal__overlay">
-    <article class="modal__popup">
-      <div class="modal__city city-choice">
-        <h2>Ваш город:</h2>
-        <button class="city-choice__coordinates">
-          <svg width="20" height="20">
-            <use xlink:href="./img/sprite.svg#target"></use>
-          </svg>
-          <span>Определить местоположение</span>
-        </button>
-        <p>... или выберите вручную</p>
-        <ul class="city-choice__list">
-          <li class="city-choice__item city-choice__item--active">
-            <a href="#" class="city-choice__link">Новосибирск</a>
-          </li>
-          <li class="city-choice__item">
-            <a href="#" class="city-choice__link">Иркутск</a>
-          </li>
-          <li class="city-choice__item">
-            <a href="#" class="city-choice__link">Смоленск</a>
-          </li>
-          <li class="city-choice__item">
-            <a href="#" class="city-choice__link">Волгоград</a>
-          </li>
-          <li class="city-choice__item">
-            <a href="#" class="city-choice__link">Комсомольск-на-Амуре</a>
-          </li>
-        </ul>
+<body class="no-js">
+  <div class="main-screen">
+    <section class="modal modal--city">
+      <h2 class="visually-hidden">Выбор города</h2>
+      <div class="modal__overlay">
+        <article class="modal__popup">
+          <div class="modal__city city-choice">
+            <h2>Ваш город:</h2>
+            <button class="city-choice__coordinates">
+              <svg width="20" height="20">
+                <use xlink:href="./img/sprite.svg#target"></use>
+              </svg>
+              <span>Определить местоположение</span>
+            </button>
+            <p>... или выберите вручную</p>
+            <ul class="city-choice__list">
+              <li class="city-choice__item city-choice__item--active">
+                <a href="#" class="city-choice__link">Новосибирск</a>
+              </li>
+              <li class="city-choice__item">
+                <a href="#" class="city-choice__link">Иркутск</a>
+              </li>
+              <li class="city-choice__item">
+                <a href="#" class="city-choice__link">Смоленск</a>
+              </li>
+              <li class="city-choice__item">
+                <a href="#" class="city-choice__link">Волгоград</a>
+              </li>
+              <li class="city-choice__item">
+                <a href="#" class="city-choice__link">Комсомольск-на-Амуре</a>
+              </li>
+            </ul>
+          </div>
+          <button type="button" class="modal__close">
+            <span class="visually-hidden">Закрыть</span>
+            <svg width="17" height="17">
+              <use xlink:href="./img/sprite.svg#burger-close"></use>
+            </svg>
+          </button>
+        </article>
       </div>
-      <button type="button" class="modal__close">
-        <span class="visually-hidden">Закрыть</span>
-        <svg width="17" height="17">
-          <use xlink:href="./img/sprite.svg#burger-close"></use>
-        </svg>
-      </button>
-    </article>
-  </div>
-</section>
+    </section>
 
-<section class="modal ">
-  <h2 class="visually-hidden">Выбор города</h2>
-  <div class="modal__overlay">
-    <article class="modal__popup">
-      <form class="modal__question question">
-        <h2>Задайте вопрос</h2>
-        <div class="question__item">
-          <p>Чтобы мы смогли обращаться к вам, оставьте ваше имя</p>
-          <div class="question__wrapper">
-            <label for="name">Имя</label>
-            <input id="name" type="text" placeholder="Имя" required>
+    <section class="modal modal--question">
+      <h2 class="visually-hidden">Выбор города</h2>
+      <div class="modal__overlay">
+        <article class="modal__popup">
+          <form class="modal__question question">
+            <h2>Задайте вопрос</h2>
+            <div class="question__item question__item--name" title = "Введите имя">
+              <p>Чтобы мы смогли обращаться к вам, оставьте ваше имя</p>
+              <div class="question__wrapper">
+                <label for="name">Имя</label>
+                <input id="name" type="text" placeholder="Имя">
+              </div>
+            </div>
+            <div class="question__item question__item--email"  title = "Введён некорректный e-mail, попробуйте заново">
+              <p>Чтобы вы получили ответ, оставьте ваш e-mail </p>
+              <div class="question__wrapper">
+                <label for="email">E-mail</label>
+                <input id="email" placeholder="E-mail">
+              </div>
+            </div>
+            <div class="question__item question__item--text"  title = "Введите вопрос">
+              <p>Ваш вопрос:</p>
+              <div class="question__wrapper">
+                <label for="text">Начните вводить ...</label>
+                <textarea id="text" placeholder="Начните вводить ..."></textarea>
+              </div>
+            </div>
+            <div class="question__agree">
+              <input id="agree" type="checkbox">
+              <label for="agree" tabindex="1">
+                <span>
+                  Я согласен с
+                </span>
+                <span>
+                  <a href="#">
+                    правилами обработки персональных данных
+                  </a>
+                </span>
+                <span>
+                  и пользовательским соглашением
+                </span>
+              </label>
+            </div>
+            <button type="submit" class="button question__submit">Отправить вопрос</button>
+          </form>
+          <button type="button" class="modal__close">
+            <span class="visually-hidden">Закрыть</span>
+            <svg width="17" height="17">
+              <use xlink:href="./img/sprite.svg#burger-close"></use>
+            </svg>
+          </button>
+        </article>
+      </div>
+    </section>
+    <header class="page-header">
+      <div class="container">
+        <div class="page-header__content">
+          <a class="page-header__logo">
+            <svg width="136" height="50">
+              <use xlink:href="./img/sprite.svg#logo"></use>
+            </svg>
+          </a>
+          <nav class="page-header__nav main-nav">
+            <ul class="main-nav__list">
+              <li class="main-nav__item">
+                <a href="./catalog.html" class="main-nav__link">Квесты</a>
+              </li>
+              <li class="main-nav__item">
+                <a href="#" class="main-nav__link">Новичкам</a>
+              </li>
+              <li class="main-nav__item">
+                <a href="#" class="main-nav__link">Отзывы</a>
+              </li>
+              <li class="main-nav__item">
+                <a href="#" class="main-nav__link">Акции</a>
+              </li>
+              <li class="main-nav__item">
+                <a href="#" class="main-nav__link">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+          <div class="page-header__contacts">
+            <a href="./modal-city.html" class="page-header__link page-header__city">
+              <svg width="16" height="21">
+                <use xlink:href="./img/sprite.svg#pin"></use>
+              </svg>
+              <span>
+                НОВОСИБИРСК
+              </span>
+            </a>
+            <a href="tel:+73832840160" class="page-header__link page-header__tel">
+              <span>
+                8 (383) 284 01 60
+              </span>
+            </a>
           </div>
+          <button class="page-header__toggle">
+            Меню
+          </button>
         </div>
-        <div class="question__item">
-          <p>Чтобы вы получили ответ, оставьте ваш e-mail </p>
-          <div class="question__wrapper">
-            <label for="email">E-mail</label>
-            <input id="email" type="email" placeholder="E-mail" required>
-          </div>
+      </div>
+    </header>
+
+    <section class="intro">
+      <div class="container">
+        <div class="intro__content">
+          <h1>
+            Лучшие квесты
+            <br>
+            в Новосибирске
+          </h1>
+          <p>
+            Надоело проводить свободное время лёжа на диване? Игровые площадки questroom на целый час погружают вас в мир
+            незабываемых авантюр. Ищите подсказки, решайте головоломки и находите выход из комнаты!
+          </p>
+          <a href="./catalog.html" class="button intro__choice">
+            Выбрать квест
+          </a>
         </div>
-        <div class="question__item question__item--text">
-          <p>Ваш вопрос:</p>
-          <div class="question__wrapper">
-            <label for="text">Начните вводить ...</label>
-            <textarea id="text" placeholder="Начните вводить ..." required></textarea>
-          </div>
-        </div>
-        <div class="question__agree">
-          <input id="agree" type="checkbox" required>
-          <label for="agree">
-            <span>
-              Я согласен с
-            </span>
-            <span>
-              <a href="#">
-                правилами обработки персональных данных
+      </div>
+    </section>
+
+    <footer class="main-screen__footer page-footer">
+      <div class="container">
+        <div class="page-footer__content">
+          <ul class="page-footer__socials">
+            <li class="page-footer__item page-footer__item--instagram">
+              <a href="#" class="page-footer__link">
+                <span class="visually-hidden">Инстаграм</span>
               </a>
-            </span>
-            <span>
-              и пользовательским соглашением
-            </span>
-          </label>
-        </div>
-        <button type="submit" class="button question__submit question__submit--inactive">Отправить вопрос</button>
-      </form>
-      <button type="button" class="modal__close">
-        <span class="visually-hidden">Закрыть</span>
-        <svg width="17" height="17">
-          <use xlink:href="./img/sprite.svg#burger-close"></use>
-        </svg>
-      </button>
-    </article>
-  </div>
-</section>
-<!--
-<body class="main-screen menu-opened">
-  <header class="page-header page-header--menu-opened"> -->
-
-<body class="main-screen">
-  <header class="page-header">
-    <div class="container">
-      <div class="page-header__content">
-        <a class="page-header__logo">
-          <svg width="136" height="50">
-            <use xlink:href="./img/sprite.svg#logo"></use>
-          </svg>
-        </a>
-        <nav class="page-header__nav main-nav">
-          <ul class="main-nav__list">
-            <li class="main-nav__item">
-              <a href="./catalog.html" class="main-nav__link">Квесты</a>
             </li>
-            <li class="main-nav__item">
-              <a href="#" class="main-nav__link">Новичкам</a>
-            </li>
-            <li class="main-nav__item">
-              <a href="#" class="main-nav__link">Отзывы</a>
-            </li>
-            <li class="main-nav__item">
-              <a href="#" class="main-nav__link">Акции</a>
-            </li>
-            <li class="main-nav__item">
-              <a href="#" class="main-nav__link">Контакты</a>
+            <li class="page-footer__item page-footer__item--vk">
+              <a href="#" class="page-footer__link">
+                <span class="visually-hidden">Вконтакте</span>
+              </a>
             </li>
           </ul>
-        </nav>
-        <div class="page-header__contacts">
-          <a href="#" class="page-header__link page-header__city">
-            <svg width="16" height="21">
-              <use xlink:href="./img/sprite.svg#pin"></use>
-            </svg>
-            <span>
-              НОВОСИБИРСК
-            </span>
-          </a>
-          <a href="tel:+73832840160" class="page-header__link page-header__tel">
-            <span>
-              8 (383) 284 01 60
-            </span>
+          <a href="modal-question.html" class="page-footer__question">
+            Задать вопрос
           </a>
         </div>
-        <button class="page-header__toggle">
-          Меню
-        </button>
       </div>
-    </div>
-  </header>
-
-  <section class="intro">
-    <div class="container">
-      <div class="intro__content">
-        <h1>
-          Лучшие квесты
-          <br>
-          в Новосибирске
-        </h1>
-        <p>
-          Надоело проводить свободное время лёжа на диване? Игровые площадки questroom на целый час погружают вас в мир
-          незабываемых авантюр. Ищите подсказки, решайте головоломки и находите выход из комнаты!
-        </p>
-        <a href="./catalog.html" class="button intro__choice">
-          Выбрать квест
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <footer class="main-screen__footer page-footer">
-    <div class="container">
-      <div class="page-footer__content">
-        <ul class="page-footer__socials">
-          <li class="page-footer__item page-footer__item--instagram">
-            <a href="#" class="page-footer__link">
-              <span class="visually-hidden">Инстаграм</span>
-            </a>
-          </li>
-          <li class="page-footer__item page-footer__item--vk">
-            <a href="#" class="page-footer__link">
-              <span class="visually-hidden">Вконтакте</span>
-            </a>
-          </li>
-        </ul>
-        <a href="#" class="page-footer__question">
-          Задать вопрос
-        </a>
-      </div>
-    </div>
-  </footer>
+    </footer>
+  </div>
+  <script src="./js/script.js"></script>
 </body>
 
 </html>

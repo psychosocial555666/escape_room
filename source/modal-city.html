@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="Учебный проект HTML Academy Escape Room">
+  <meta name="robots" content="nofollow">
+  <meta name="googlebot" content="noindex">
+  <title>Escape Room</title>
+  <link rel="preload" href="./fonts/Raleway-Regular.woff2" as="font">
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+  <div class="main-screen">
+    <section class="modal modal--city modal--show">
+      <h2 class="visually-hidden">Выбор города</h2>
+      <div class="modal__overlay">
+        <article class="modal__popup">
+          <div class="modal__city city-choice">
+            <h2>Ваш город:</h2>
+            <button class="city-choice__coordinates">
+              <svg width="20" height="20">
+                <use xlink:href="./img/sprite.svg#target"></use>
+              </svg>
+              <span>Определить местоположение</span>
+            </button>
+            <p>... или выберите вручную</p>
+            <ul class="city-choice__list">
+              <li class="city-choice__item city-choice__item--active">
+                <a href="#" class="city-choice__link">Новосибирск</a>
+              </li>
+              <li class="city-choice__item">
+                <a href="#" class="city-choice__link">Иркутск</a>
+              </li>
+              <li class="city-choice__item">
+                <a href="#" class="city-choice__link">Смоленск</a>
+              </li>
+              <li class="city-choice__item">
+                <a href="#" class="city-choice__link">Волгоград</a>
+              </li>
+              <li class="city-choice__item">
+                <a href="#" class="city-choice__link">Комсомольск-на-Амуре</a>
+              </li>
+            </ul>
+          </div>
+          </button>
+        </article>
+      </div>
+    </section>
+</body>
+
+</html>
