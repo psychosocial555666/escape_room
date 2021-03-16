@@ -1,6 +1,7 @@
 .main-screen {
   width: 100%;
   height: 100vh;
+  min-height: 100%;
   overflow: hidden;
   position: relative;
 
@@ -25,7 +26,6 @@
 @media (max-width: $mobile) {
   .main-screen {
     background-image: url("../img/main_bg_mobile.jpg");
-
     @supports (background-image: url("../img/main_bg_mobile.webp")) {
       background-image: url("../img/main_bg_mobile.webp");
     }

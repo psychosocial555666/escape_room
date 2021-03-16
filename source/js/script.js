@@ -65,9 +65,11 @@
     var name = questionForm.querySelector('.question__item--name input').value;
     var email = questionForm.querySelector('.question__item--email input').value;
     var text = questionForm.querySelector('.question__item--text textarea').value;
+    var agree = questionForm.querySelector('.question__agree input').checked;
     var nameField = questionForm.querySelector('.question__item--name');
     var emailField = questionForm.querySelector('.question__item--email');
     var textField = questionForm.querySelector('.question__item--text');
+    var agreeField = questionForm.querySelector('.question__agree');
     var mask = /\S+@\S+\.\S+/;
 
     var makeValid = function (item) {
@@ -98,6 +100,13 @@
       return false;
     } else {
       makeValid(textField);
+    }
+
+    if (!agree) {
+      makeInvalid(agreeField);
+      return false;
+    } else {
+      makeValid(agreeField);
     }
 
     storage.name = name;

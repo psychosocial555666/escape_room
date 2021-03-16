@@ -5,6 +5,7 @@
 
 html {
   scroll-behavior: smooth;
+  height: 100%;
 }
 
 body {
@@ -14,6 +15,7 @@ body {
   color: $white;
   font-family: $main-font;
   font-feature-settings: "pnum" on, "lnum" on;
+  height: 100%;
 }
 
 .visually-hidden {

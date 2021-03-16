@@ -108,6 +108,10 @@
 }
 
 @media (max-width: $tablet) {
+  .page-header {
+    overflow: scroll;
+  }
+
   .page-header--onscroll {
     background: linear-gradient(0deg, transparent 0%, rgba(19, 18, 18, 0.9) 30%);
   }
