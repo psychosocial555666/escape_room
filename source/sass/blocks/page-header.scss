@@ -17,6 +17,8 @@
 .page-header__logo {
   padding-right: 10.7%;
   max-width: 136px;
+  display: block;
+  box-sizing: content-box;
 
   @media (max-width: 1120px) {
     padding-right: 0;

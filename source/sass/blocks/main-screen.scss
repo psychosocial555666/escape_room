@@ -4,38 +4,22 @@
   min-height: 100%;
   overflow: hidden;
   position: relative;
-
   background-image: url("../img/main_bg.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 
-  @supports (background-image: url("../img/main_bg.webp")) {
-    background-image: url("../img/main_bg.webp");
-  }
-
   @media (min-resolution: 2dppx) {
     background-image: url("../img/main_bg@2x.jpg");
-
-    @supports (background-image: url("../img/main_bg@2x.webp")) {
-      background-image: url("../img/main_bg@2x.webp");
-    }
   }
 }
 
 @media (max-width: $mobile) {
   .main-screen {
     background-image: url("../img/main_bg_mobile.jpg");
-    @supports (background-image: url("../img/main_bg_mobile.webp")) {
-      background-image: url("../img/main_bg_mobile.webp");
-    }
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/main_bg_mobile@2x.jpg");
-
-      @supports (background-image: url("../img/main_bg_mobile@2x.webp")) {
-        background-image: url("../img/main_bg_mobile@2x.webp");
-      }
     }
   }
 }
